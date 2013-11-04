@@ -95,4 +95,13 @@
         android:text="@string/button_calc"
         android:onClick="calcCons" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dev_by"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
 </RelativeLayout>

@@ -3,6 +3,8 @@ package de.manthei.drivebook;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
@@ -19,4 +21,19 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	public void calcCons(View view) {
+		
+		EditText editDist = (EditText) findViewById(R.id.editDist);
+		EditText editFuel = (EditText) findViewById(R.id.editFuel);
+		EditText editCons = (EditText) findViewById(R.id.editCons);
+		
+		float distance = Float.parseFloat(editDist.getText().toString());
+		float fuel = Float.parseFloat(editFuel.getText().toString());
+		
+		float consume = (fuel / distance) * 100;
+		
+		editCons.setText(Float.toString(consume));
+		
+	}
+	
 }

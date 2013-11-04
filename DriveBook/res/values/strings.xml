@@ -10,5 +10,6 @@
 	<string name="text_cons">Durchnschnittsverbrauch</string>
 	<string name="text_lperkm">l/km</string>
 	<string name="button_calc">Berechne Verbrauch</string>
+	<string name="dev_by">Designed by Manthei</string>
     
 </resources>
