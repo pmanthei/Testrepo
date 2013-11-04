@@ -9,28 +9,90 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textDist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:text="@string/button_save" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_dist" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editDist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:ems="10" >
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textDist"
+        android:ems="10"
+        android:inputType="numberDecimal" >
 
         <requestFocus />
     </EditText>
+
+    <TextView
+        android:id="@+id/textKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editDist"
+        android:layout_toRightOf="@+id/editDist"
+        android:text="@string/text_km" />
+
+    <TextView
+        android:id="@+id/textFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editDist"
+        android:layout_below="@+id/editDist"
+        android:text="@string/text_fuel" />
+
+    <EditText
+        android:id="@+id/editFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textFuel"
+        android:layout_below="@+id/textFuel"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textLiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editFuel"
+        android:layout_alignLeft="@+id/textKm"
+        android:text="@string/text_liter" />
+
+    <TextView
+        android:id="@+id/textCons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editFuel"
+        android:layout_below="@+id/editFuel"
+        android:text="@string/text_cons" />
+
+    <EditText
+        android:id="@+id/editCons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCons"
+        android:layout_toLeftOf="@+id/textLiter"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textLPerKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editCons"
+        android:layout_toRightOf="@+id/editCons"
+        android:text="@string/text_lperkm" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editCons"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_calc"
+        android:onClick="calcCons" />
 
 </RelativeLayout>
