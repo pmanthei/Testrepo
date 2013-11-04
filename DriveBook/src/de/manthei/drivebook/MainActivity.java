@@ -25,14 +25,19 @@ public class MainActivity extends Activity {
 		
 		EditText editDist = (EditText) findViewById(R.id.editDist);
 		EditText editFuel = (EditText) findViewById(R.id.editFuel);
+		EditText editPrice = (EditText) findViewById(R.id.editPrice);
 		EditText editCons = (EditText) findViewById(R.id.editCons);
+		EditText editCost = (EditText) findViewById(R.id.editCost);
 		
 		float distance = Float.parseFloat(editDist.getText().toString());
 		float fuel = Float.parseFloat(editFuel.getText().toString());
+		float price = Float.parseFloat(editPrice.getText().toString());
 		
 		float consume = (fuel / distance) * 100;
+		float cost = price / distance;
 		
 		editCons.setText(Float.toString(consume));
+		editCost.setText(Float.toString(cost));
 		
 	}
 	

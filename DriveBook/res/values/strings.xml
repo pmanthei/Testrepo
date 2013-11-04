@@ -8,7 +8,11 @@
 	<string name="text_fuel">Getankte Liter</string>
 	<string name="text_liter">Liter</string>
 	<string name="text_cons">Durchnschnittsverbrauch</string>
-	<string name="text_lperkm">l/km</string>
+	<string name="text_lperkm">l/100 km</string>
+	<string name="text_price">Preis</string>
+	<string name="text_euro">€</string>
+	<string name="text_cost">Kosten pro Kilometer</string>
+	<string name="text_europerkm">€/km</string>
 	<string name="button_calc">Berechne Verbrauch</string>
 	<string name="dev_by">Designed by Manthei</string>
     

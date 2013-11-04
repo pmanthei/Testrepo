@@ -62,11 +62,36 @@
         android:text="@string/text_liter" />
 
     <TextView
-        android:id="@+id/textCons"
+        android:id="@+id/textPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editFuel"
         android:layout_below="@+id/editFuel"
+        android:text="@string/text_price" />
+
+    <EditText
+        android:id="@+id/editPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editCons"
+        android:layout_below="@+id/textPrice"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editPrice"
+        android:layout_alignLeft="@+id/textLiter"
+        android:text="@string/text_euro" />
+
+    <TextView
+        android:id="@+id/textCons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editCons"
+        android:layout_below="@+id/editPrice"
         android:text="@string/text_cons" />
 
     <EditText
@@ -86,22 +111,47 @@
         android:layout_toRightOf="@+id/editCons"
         android:text="@string/text_lperkm" />
 
-    <Button
-        android:id="@+id/buttonCalc"
+    <TextView
+        android:id="@+id/textCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editCost"
         android:layout_below="@+id/editCons"
-        android:layout_centerHorizontal="true"
-        android:text="@string/button_calc"
-        android:onClick="calcCons" />
+        android:text="@string/text_cost" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textEuroPerKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editCost"
+        android:layout_toRightOf="@+id/editCost"
+        android:text="@string/text_europerkm" />
+
+    <TextView
+        android:id="@+id/textDev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/dev_by"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textDev"
+        android:layout_alignRight="@+id/textKm"
+        android:onClick="calcCons"
+        android:text="@string/button_calc" />
+
+    <EditText
+        android:id="@+id/editCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editCons"
+        android:layout_below="@+id/textCost"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
 </RelativeLayout>
