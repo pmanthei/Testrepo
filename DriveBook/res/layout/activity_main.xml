@@ -101,6 +101,7 @@
         android:layout_below="@+id/textCons"
         android:layout_toLeftOf="@+id/textLiter"
         android:ems="10"
+        android:enabled="false"
         android:inputType="numberDecimal" />
 
     <TextView
@@ -152,6 +153,7 @@
         android:layout_alignLeft="@+id/editCons"
         android:layout_below="@+id/textCost"
         android:ems="10"
+        android:enabled="false"
         android:inputType="numberDecimal" />
 
 </RelativeLayout>
