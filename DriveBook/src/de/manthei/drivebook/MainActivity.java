@@ -59,10 +59,10 @@ public class MainActivity extends Activity {
 		
 	}
 	
-	private boolean isEmpty(EditText editText, String fieldName) {
+	private boolean isEmpty(final EditText editText, final String fieldName) {
 		String text = editText.getText().toString();
 		if (text.isEmpty() || text.equals(".")) {
-			Toast.makeText(this, "Gefahrene Strecke ist leer!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, fieldName + " ist leer!", Toast.LENGTH_SHORT).show();
 			return true;
 		}
 		return false;
