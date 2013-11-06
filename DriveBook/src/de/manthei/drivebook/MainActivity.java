@@ -1,5 +1,8 @@
 package de.manthei.drivebook;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -22,7 +25,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	public void calcCons(View view) {
+	public void onClick(View view) {
 		
 		EditText editDist = (EditText) findViewById(R.id.editDist);
 		EditText editFuel = (EditText) findViewById(R.id.editFuel);
@@ -36,20 +39,23 @@ public class MainActivity extends Activity {
 			return;
 		}
 		
-		float distance = Float.parseFloat(editDist.getText().toString());
-		float fuel = Float.parseFloat(editFuel.getText().toString());
-		float price = Float.parseFloat(editPrice.getText().toString());
+		double distance = Float.parseFloat(editDist.getText().toString());
+		double fuel = Float.parseFloat(editFuel.getText().toString());
+		double price = Float.parseFloat(editPrice.getText().toString());
 		
 		if (fuel == 0 || distance == 0 || price == 0) {
 			Toast.makeText(this, "Felder dürfen nicht 0 sein.", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		
-		float consume = (fuel / distance) * 100;
-		float cost = price / distance;
+		DecimalFormat format = new DecimalFormat("#.###");
+		format.setRoundingMode(RoundingMode.HALF_UP);
 		
-		editCons.setText(Float.toString(consume));
-		editCost.setText(Float.toString(cost));
+		double consume = (fuel / distance) * 100;
+		double cost = price / distance;
+		
+		editCons.setText(format.format(consume));
+		editCost.setText(format.format(cost));
 		
 	}
 	

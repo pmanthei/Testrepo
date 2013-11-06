@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textDev"
         android:layout_alignRight="@+id/textKm"
-        android:onClick="calcCons"
+        android:onClick="onClick"
         android:text="@string/button_calc" />
 
     <EditText
