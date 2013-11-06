@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CarJSONActivity" >
+
+    <TextView
+        android:id="@+id/textManufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_manufacturer" />
+
+    <EditText
+        android:id="@+id/editManufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textManufacturer"
+        android:layout_below="@+id/textManufacturer"
+        android:ems="10"
+        android:inputType="none" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editManufacturer"
+        android:layout_below="@+id/editManufacturer"
+        android:text="@string/text_model" />
+
+    <EditText
+        android:id="@+id/editModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textModel"
+        android:layout_below="@+id/textModel"
+        android:ems="10"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/textEngineSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editModel"
+        android:layout_below="@+id/editModel"
+        android:text="@string/text_engine_size" />
+
+    <EditText
+        android:id="@+id/editEngineSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textEngineSize"
+        android:layout_below="@+id/textEngineSize"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textCcm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editEngineSize"
+        android:layout_toRightOf="@+id/editEngineSize"
+        android:text="@string/text_ccm" />
+
+    <TextView
+        android:id="@+id/textPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editEngineSize"
+        android:layout_below="@+id/editEngineSize"
+        android:text="@string/text_power" />
+
+    <EditText
+        android:id="@+id/editPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textPower"
+        android:layout_below="@+id/textPower"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editPower"
+        android:layout_alignLeft="@+id/textCcm"
+        android:text="@string/text_hp" />
+
+    <TextView
+        android:id="@+id/textVintage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editPower"
+        android:layout_below="@+id/editPower"
+        android:text="@string/text_vintage" />
+
+    <EditText
+        android:id="@+id/editVintage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textVintage"
+        android:layout_below="@+id/textVintage"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/textDevBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dev_by" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textDevBy"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_save"
+        android:onClick="saveJSON" />
+
+</RelativeLayout>

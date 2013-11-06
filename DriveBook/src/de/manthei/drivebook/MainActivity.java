@@ -1,10 +1,12 @@
 package de.manthei.drivebook;
 
+import java.io.File;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +18,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		File file = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
+		if (!file.exists()) {
+			Intent intent = new Intent(this, CarJSONActivity.class);
+			startActivity(intent);
+		}
+		
 	}
 
 	@Override

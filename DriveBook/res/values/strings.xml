@@ -3,17 +3,26 @@
 
     <string name="app_name">Drive Book</string>
     <string name="action_settings">Settings</string>
-	<string name="text_dist">Gefahrene Strecke</string>
-	<string name="text_km">km</string>
-	<string name="text_fuel">Getankte Liter</string>
-	<string name="text_liter">Liter</string>
-	<string name="text_cons">Durchnschnittsverbrauch</string>
-	<string name="text_lperkm">l/100 km</string>
-	<string name="text_price">Preis</string>
-	<string name="text_euro">€</string>
-	<string name="text_cost">Kosten pro Kilometer</string>
-	<string name="text_europerkm">€/km</string>
-	<string name="button_calc">Berechne Verbrauch</string>
-	<string name="dev_by">Designed by Manthei</string>
-    
+    <string name="text_dist">Gefahrene Strecke</string>
+    <string name="text_km">km</string>
+    <string name="text_fuel">Getankte Liter</string>
+    <string name="text_liter">Liter</string>
+    <string name="text_cons">Durchnschnittsverbrauch</string>
+    <string name="text_lperkm">l/100 km</string>
+    <string name="text_price">Preis</string>
+    <string name="text_euro">€</string>
+    <string name="text_cost">Kosten pro Kilometer</string>
+    <string name="text_europerkm">€/km</string>
+    <string name="button_calc">Berechne Verbrauch</string>
+    <string name="dev_by">Designed by Manthei</string>
+    <string name="title_activity_car_json">CarJSONActivity</string>
+    <string name="text_manufacturer">Hersteller (Model)</string>
+    <string name="text_model">Model</string>
+    <string name="text_engine_size">Hubraum</string>
+    <string name="text_ccm">ccm</string>
+    <string name="text_power">Leistung</string>
+    <string name="text_hp">PS</string>
+    <string name="text_vintage">Baujahr</string>
+    <string name="button_save">Speichern</string>
+
 </resources>
