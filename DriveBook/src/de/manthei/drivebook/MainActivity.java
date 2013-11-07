@@ -38,8 +38,12 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.action_settings:
-			
+		case R.id.menu_car:
+			File file = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
+			if (file.exists()) {
+				Intent intent = new Intent(this, CarActivity.class);
+				startActivity(intent);
+			}
 			break;
 
 		default:

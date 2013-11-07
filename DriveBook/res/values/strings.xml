@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Drive Book</string>
-    <string name="action_car">Auto</string>
+    <string name="action_settings">Auto</string>
     <string name="text_dist">Gefahrene Strecke</string>
     <string name="text_km">km</string>
     <string name="text_fuel">Getankte Liter</string>
@@ -25,6 +25,6 @@
     <string name="text_vintage">Baujahr</string>
     <string name="button_save">Speichern</string>
     <string name="title_activity_car">CarActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="text_car">Auto</string>
 
 </resources>
