@@ -17,43 +17,75 @@
         android:text="@string/text_manufacturer" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textInputCarManufacturer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textCarManufacturer"
         android:layout_below="@+id/textCarManufacturer"
-        android:text="TextView" />
+        android:text="" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textCarModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textInputCarManufacturer"
+        android:layout_below="@+id/textInputCarManufacturer"
         android:text="@string/text_model" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textInputCarModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:text="TextView" />
+        android:layout_alignLeft="@+id/textCarModel"
+        android:layout_below="@+id/textCarModel"
+        android:text="" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textCarEngineSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textInputCarModel"
+        android:layout_below="@+id/textInputCarModel"
         android:text="@string/text_engine_size" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textInputCarEngineSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/textView5"
-        android:text="TextView" />
+        android:layout_alignLeft="@+id/textCarEngineSize"
+        android:layout_below="@+id/textCarEngineSize"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textCarPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textInputCarEngineSize"
+        android:layout_below="@+id/textInputCarEngineSize"
+        android:text="@string/text_power" />
+
+    <TextView
+        android:id="@+id/textInputCarPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCarPower"
+        android:layout_below="@+id/textCarPower"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textCarVintage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textInputCarPower"
+        android:layout_below="@+id/textInputCarPower"
+        android:text="@string/text_vintage" />
+
+    <TextView
+        android:id="@+id/textInputCarVintage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCarVintage"
+        android:layout_below="@+id/textCarVintage"
+        android:text="" />
 
 </RelativeLayout>
