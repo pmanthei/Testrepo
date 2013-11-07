@@ -78,6 +78,62 @@ public class CarJSONActivityTest extends ActivityUnitTestCase<CarJSONActivity> {
 		assertNotNull("buttonSaveTest is null", buttonSaveTest);
 	}
 	
+	@MediumTest
+	public void testTextManufacturer_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_manufacturer);
+		final String actual = textManufacturerTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextModel_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_model);
+		final String actual = textModelTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextEngineSize_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_engine_size);
+		final String actual = textEngineSizeTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextCcm_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_ccm);
+		final String actual = textCcmTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextPower_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_power);
+		final String actual = textPowerTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextHp_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_hp);
+		final String actual = textHpTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextVintage_labelText() {
+		final String expected = jsonActivity.getString(R.string.text_vintage);
+		final String actual = textVintageTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
+	@MediumTest
+	public void testTextDevBy_labelText() {
+		final String expected = jsonActivity.getString(R.string.dev_by);
+		final String actual = textDevByTest.getText().toString();
+		assertEquals(expected, actual);
+	}
+	
 	protected void tearDown() throws Exception {
 		super.tearDown();
 	}
