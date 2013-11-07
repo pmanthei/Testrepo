@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import de.manthei.drivebook.CarJSONActivity;
-import de.manthei.drivebook.MainActivity;
 import de.manthei.drivebook.R;
 
 public class CarJSONActivityTest extends ActivityUnitTestCase<CarJSONActivity> {
@@ -61,7 +60,22 @@ public class CarJSONActivityTest extends ActivityUnitTestCase<CarJSONActivity> {
 
 	@MediumTest
 	public void testPreconditions() {
+		assertNotNull("textManufacturerTest is null", textManufacturerTest);
+		assertNotNull("textModelTest is null", textModelTest);
+		assertNotNull("textEngineSizeTest is null", textEngineSizeTest);
+		assertNotNull("textCcmTest is null", textCcmTest);
+		assertNotNull("textPowerTest is null", textPowerTest);
+		assertNotNull("textHpTest is null", textHpTest);
+		assertNotNull("textVintageTest is null", textVintageTest);
+		assertNotNull("textDevByTest is null", textDevByTest);
 		
+		assertNotNull("editManufacturerTest is null", editManufacturerTest);
+		assertNotNull("editModelTest is null", editModelTest);
+		assertNotNull("editEngineSizeTest is null", editEngineSizeTest);
+		assertNotNull("editPowerTest is null", editPowerTest);
+		assertNotNull("editVintageTest is null", editVintageTest);
+		
+		assertNotNull("buttonSaveTest is null", buttonSaveTest);
 	}
 	
 	protected void tearDown() throws Exception {
