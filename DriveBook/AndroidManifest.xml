@@ -26,6 +26,14 @@
             android:name="de.manthei.drivebook.CarJSONActivity"
             android:label="@string/title_activity_car_json" >
         </activity>
+        <activity
+            android:name="de.manthei.drivebook.CarActivity"
+            android:label="@string/title_activity_car"
+            android:parentActivityName="de.manthei.drivebook.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.manthei.drivebook.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
