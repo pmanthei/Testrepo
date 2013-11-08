@@ -60,9 +60,9 @@ public class MainActivity extends Activity {
 		EditText editCons = (EditText) findViewById(R.id.editCons);
 		EditText editCost = (EditText) findViewById(R.id.editCost);
 		
-		if (	isEmpty(editDist, this.getText(R.id.textDist).toString()) || 
-				isEmpty(editFuel, this.getText(R.id.textFuel).toString()) || 
-				isEmpty(editPrice, this.getText(R.id.textPrice).toString()) ) {
+		if (	isEmpty(editDist, this.getText(R.string.text_dist).toString()) || 
+				isEmpty(editFuel, this.getText(R.string.text_fuel).toString()) || 
+				isEmpty(editPrice, this.getText(R.string.text_price).toString()) ) {
 			return;
 		}
 		
