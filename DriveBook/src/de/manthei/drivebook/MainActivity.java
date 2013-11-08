@@ -15,17 +15,15 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	private File jsonFile;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		File file = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
-		if (!file.exists()) {
-			Intent intent = new Intent(this, CarJSONActivity.class);
-			startActivity(intent);
-		}
-		
+		jsonFile = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
+		startActivityWhenFileExists(CarJSONActivity.class);
 	}
 
 	@Override
@@ -39,11 +37,7 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_car:
-			File file = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
-			if (file.exists()) {
-				Intent intent = new Intent(this, CarActivity.class);
-				startActivity(intent);
-			}
+			startActivityWhenFileExists(CarActivity.class);
 			break;
 
 		default:
@@ -93,6 +87,13 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return false;
+	}
+	
+	private void startActivityWhenFileExists(Class<?> cls) {
+		if (!jsonFile.exists()) {
+			Intent intent = new Intent(this, cls);
+			startActivity(intent);
+		}		
 	}
 	
 }

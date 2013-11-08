@@ -45,6 +45,7 @@ public class CarJSONActivity extends Activity {
 		String power = editPower.getText().toString();
 		String vintage = editVintage.getText().toString();
 		
+		FileOutputStream outputStream = null;
 		JSONObject carjson = new JSONObject();
 		try {
 			carjson.put(getString(R.string.text_manufacturer), manufacturer);
@@ -52,25 +53,15 @@ public class CarJSONActivity extends Activity {
 			carjson.put(getString(R.string.text_engine_size), engineSize);
 			carjson.put(getString(R.string.text_power), power);
 			carjson.put(getString(R.string.text_vintage), vintage);
+			outputStream = openFileOutput(FILE_NAME, MODE_PRIVATE);
+			outputStream.write(carjson.toString().getBytes());
+			outputStream.close();
 		} catch (JSONException e) {
 			Toast.makeText(this, "JSON creation failed", Toast.LENGTH_SHORT).show();
-		}
-		
-		FileOutputStream outputStream = null;
-		
-		try {
-			outputStream = openFileOutput(FILE_NAME, MODE_PRIVATE);
 		} catch (FileNotFoundException e) {
 			Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show();
-		}
-		
-		if (outputStream != null) {
-			try {
-				outputStream.write(carjson.toString().getBytes());
-				outputStream.close();
-			} catch (IOException e) {
-				Toast.makeText(this, "Writer failed", Toast.LENGTH_SHORT).show();
-			}
+		} catch (IOException e) {
+			Toast.makeText(this, "Writer failed", Toast.LENGTH_SHORT).show();
 		}
 		
 	}
