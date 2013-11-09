@@ -60,23 +60,20 @@ public class MainActivity extends Activity {
 			return;
 		}
 		
-		double distance = Float.parseFloat(editDist.getText().toString());
-		double fuel = Float.parseFloat(editFuel.getText().toString());
-		double price = Float.parseFloat(editPrice.getText().toString());
+		CarConsume carConsume = new CarConsume(Float.parseFloat(editDist.getText().toString()), 
+				Float.parseFloat(editFuel.getText().toString()), 
+				Float.parseFloat(editPrice.getText().toString()));
 		
-		if (fuel == 0 || distance == 0 || price == 0) {
-			Toast.makeText(this, "Felder dürfen nicht 0 sein.", Toast.LENGTH_SHORT).show();
-			return;
-		}
+//		if (fuel == 0 || distance == 0 || price == 0) {
+//			Toast.makeText(this, "Felder dürfen nicht 0 sein.", Toast.LENGTH_SHORT).show();
+//			return;
+//		}
 		
 		DecimalFormat format = new DecimalFormat("#.###");
 		format.setRoundingMode(RoundingMode.HALF_UP);
 		
-		double consume = (fuel / distance) * 100;
-		double cost = price / distance;
-		
-		editCons.setText(format.format(consume));
-		editCost.setText(format.format(cost));
+		editCons.setText(format.format(carConsume.getConsume()));
+		editCost.setText(format.format(carConsume.getCost()));
 		
 	}
 	
