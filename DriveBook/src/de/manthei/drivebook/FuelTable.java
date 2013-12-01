@@ -10,6 +10,8 @@ public class FuelTable {
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_MEASURE = "measure";
 	public static final String COLUMN_COST = "cost";
+	public static final String COLUMN_MILEAGE = "mileage";
+	public static final String COLUMN_SUMMER = "summer";
 	public static final String COLUMN_DATE = "date";
 
 	// Database creation SQL statement
@@ -18,7 +20,9 @@ public class FuelTable {
 			+ "(" + COLUMN_ID + " integer primary key autoincrement, " 
 			+ COLUMN_MEASURE + " decimal(10,2) not null, " 
 			+ COLUMN_COST + " decimal(10,2) not null," 
-			+ COLUMN_DATE + " text not null" + ");";
+			+ COLUMN_MILEAGE + " decimal(10,2) not null, " 
+			+ COLUMN_SUMMER + " boolean not null," 
+			+ COLUMN_DATE + " integer not null" + ");";
 	
 	public static void onCreate(SQLiteDatabase database) {
 		database.execSQL(DATABASE_CREATE);

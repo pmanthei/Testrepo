@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DriveBookDatabaseHelper extends SQLiteOpenHelper {
 
-	private static final String DATABASE_NAME = "todotable.db";
+	private static final String DATABASE_NAME = "drivebook.db";
 	private static final int DATABASE_VERSION = 1;
 	
 	public DriveBookDatabaseHelper(Context context) {
@@ -16,13 +16,11 @@ public class DriveBookDatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase arg0) {
 		FuelTable.onCreate(arg0);
-		TripTable.onCreate(arg0);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
 		FuelTable.onUpgrade(arg0, arg1, arg2);
-		TripTable.onUpgrade(arg0, arg1, arg2);
 	}
 
 }
