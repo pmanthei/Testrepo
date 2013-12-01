@@ -26,5 +26,6 @@
     <string name="button_save">Speichern</string>
     <string name="title_activity_car">CarActivity</string>
     <string name="text_car">Auto</string>
+    <string name="text_overview">Übersicht</string>
 
 </resources>

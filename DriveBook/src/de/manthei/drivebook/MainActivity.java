@@ -3,10 +3,11 @@ package de.manthei.drivebook;
 import java.io.File;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Calendar;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +25,7 @@ public class MainActivity extends Activity {
 		
 		jsonFile = new File(getFilesDir(), CarJSONActivity.FILE_NAME);
 		startActivityWhenFileExists(CarJSONActivity.class);
+		
 	}
 
 	@Override
@@ -39,7 +41,9 @@ public class MainActivity extends Activity {
 		case R.id.menu_car:
 			startActivityWhenFileExists(CarActivity.class);
 			break;
-
+		case R.id.menu_overview:
+			Intent intent = new Intent(this, null);
+			startActivity(intent);
 		default:
 			break;
 		}
@@ -64,17 +68,19 @@ public class MainActivity extends Activity {
 				Float.parseFloat(editFuel.getText().toString()), 
 				Float.parseFloat(editPrice.getText().toString()));
 		
-//		if (fuel == 0 || distance == 0 || price == 0) {
-//			Toast.makeText(this, "Felder dürfen nicht 0 sein.", Toast.LENGTH_SHORT).show();
-//			return;
-//		}
-		
 		DecimalFormat format = new DecimalFormat("#.###");
 		format.setRoundingMode(RoundingMode.HALF_UP);
 		
 		editCons.setText(format.format(carConsume.getConsume()));
 		editCost.setText(format.format(carConsume.getCost()));
 		
+		FuelDataSource dataSource = new FuelDataSource(this);
+		dataSource.open();
+		dataSource.createFuel(Double.parseDouble(editFuel.getText().toString()), 
+				Double.parseDouble(editPrice.getText().toString()), 
+				Double.parseDouble(editDist.getText().toString()), 
+				false, Calendar.getInstance().getTime());
+		dataSource.close();
 	}
 	
 	private boolean isEmpty(final EditText editText, final String fieldName) {
